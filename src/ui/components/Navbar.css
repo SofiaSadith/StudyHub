@@ -1,0 +1,12 @@
+.menu{
+    position: absolute;
+    top: 70px;
+    float: left;
+    width: 39%;
+    margin-left: 20rem;
+}
+.caja{
+    float: left;
+    margin-right: 10rem;
+}
+
