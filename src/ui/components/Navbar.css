@@ -1,12 +1,35 @@
-.menu{
+.padre{
+    display: block;
     position: absolute;
-    top: 70px;
-    float: left;
-    width: 39%;
-    margin-left: 20rem;
+    left: 0;
+    right: 0;
+    top: 80px;
+    justify-content: center;
+}
+
+.navbar-nav .menu{
+    height: 50px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+    max-width: 1200px;
+    padding: 0 0.625rem;
+    margin: auto;
+    
 }
 .caja{
     float: left;
     margin-right: 10rem;
+}
+.input-group{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    flex-direction: row;
+    margin-left: 380px;
+    margin-right: auto;
+ 
+  
 }
 

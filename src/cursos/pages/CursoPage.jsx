@@ -1,5 +1,5 @@
 import { Navigate, useParams } from 'react-router-dom'
-
+import './Pages.css'
 import { getCursoById } from '../helpers';
 import { Link } from 'react-router-dom';
 
@@ -12,7 +12,7 @@ export const CursoPage = () => {
   }
   return (
     <>
-      <div className="row row-cols-1 row-cols-md-4 g-4 mt-5">
+      <div className="row row-cols-1 row-cols-md-4 g-4 contenedor">
         <div className="col">
           <div className="card">
           
@@ -31,6 +31,7 @@ export const CursoPage = () => {
               <div className="card-body">
                 <h5 className="card-title">{curso.semana2.nombre}</h5>
                 <p className="card-text">Tareas de la Semana 2.</p>
+                <Link className="btn" style={{ background: '#FF743D' }} to={`/tareas/${id}`}>Ir</Link>
               </div>
           </div>
         </div>
@@ -40,6 +41,7 @@ export const CursoPage = () => {
               <div className="card-body">
                 <h5 className="card-title">{curso.semana3.nombre}</h5>
                 <p className="card-text">Tareas de la Semana 3.</p>
+                <Link className="btn" style={{ background: '#FF743D' }} to={`/tareas/${id}`}>Ir</Link>
               </div>
           </div>
         </div>
@@ -49,13 +51,11 @@ export const CursoPage = () => {
               <div className="card-body">
                 <h5 className="card-title">Semana 4</h5>
                 <p className="card-text">Tareas de la Semana 4.</p>
+                <Link className="btn" style={{ background: '#FF743D' }} to={`/tareas/${id}`}>Ir</Link>
               </div>
           </div>
         </div>
       </div>
-
-
-
     </>
 
   )

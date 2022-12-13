@@ -1,0 +1,41 @@
+.contenedor{
+    margin-top: 5rem;
+}
+.todo{
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.estadistica{
+    width: 20rem;
+    margin-top: 2rem;
+}
+.notas{
+    margin-top: 3rem;
+    width: 600px; 
+    height: 200px; 
+    background: #FFFFFF;
+    text-align: center;
+  
+}
+.imagenes{
+    display:inline;
+    
+}
+.burbuja{
+    width: 100%;;
+}
+
+.texto{
+    position: relative;
+    display: inline-block;
+    
+}
+
+.centrado{
+    position: absolute;
+    top: 40%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}

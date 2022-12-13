@@ -1,9 +1,11 @@
-
+import './Pages.css'
 export const Tareas = () => {
 
   return (
     <>
-      <h1>Hola</h1>
+    <div className='contenedor'>
+      <h1>Tareas</h1>
+      </div>
 
     </>
 

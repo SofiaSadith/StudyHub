@@ -10,40 +10,44 @@ export const Navbar = () => {
     }
     return (
         <nav className="navbar navbar-expand-sm navbar-light p-2" >
-            
-            <Link 
-                className="navbar-brand" style={{color:'#FFE000'}}
+
+            <Link
+                className="navbar-brand" style={{ color: '#FFE000' }}
                 to="/"
             >
                 StudyHub
             </Link>
+            <div class="input-group">
+                <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                <button type="button" class="btn btn-outline-primary">Buscar</button>
+            </div>
 
-            <div className="navbar-collapse" >
-                <div className="navbar-nav menu center-block" style={{backgroundColor: '#50CAB3'}}>
+            <div className="navbar-collapse padre" >
+                <div className="navbar-nav menu" style={{ backgroundColor: '#50CAB3' }}>
 
-                    <NavLink 
-                        className="nav-item nav-link caja" 
+                    <NavLink
+                        className="nav-item nav-link caja"
                         to="/cursos"
                     >
                         Cursos
                     </NavLink>
                     <li className="nav-item dropdown " >
-                        <NavLink 
-                            className="nav-link dropdown-toggle caja"  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"  aria-expanded="false" 
-                             to="/tareas"
+                        <NavLink
+                            className="nav-link dropdown-toggle caja" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+                            to="/tareas"
                         >
                             Tareas
                         </NavLink>
                         <ul className="dropdown-menu caja" aria-labelledby="navbarDropdown" >
                             <li >
-                          
+
                                 <a className='dropdown-item' href='/tareascompletadas' >
                                     Tareas Completadas
                                 </a>
                                 <a className='dropdown-item' href='/tareaspendientes' >
                                     Tareas Pendientes
                                 </a>
-                          
+
                             </li>
                         </ul>
 
@@ -51,8 +55,8 @@ export const Navbar = () => {
                     </li>
 
 
-                    <NavLink 
-                        className="nav-item nav-link " 
+                    <NavLink
+                        className="nav-item nav-link "
                         to="/progreso"
                     >
                         Progreso

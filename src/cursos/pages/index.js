@@ -3,5 +3,5 @@ export * from './Progreso';
 export * from './Tareas';
 export * from './TareasCompletadas';
 export * from './TareasPendientes';
-export * from './Search';
+export * from './SearchPage';
 export * from './CursoPage';

@@ -1,7 +1,7 @@
 import { Navigate, useParams } from 'react-router-dom'
 
 import { getCursoById } from '../helpers';
-
+import './Pages.css';
 export const TareasPage = () => {
   const { id } = useParams();
   const curso = getCursoById(id);
@@ -11,7 +11,7 @@ export const TareasPage = () => {
   }
   return (
     <>
-      <div className="row row-cols-1 row-cols-md-4 g-4 mt-4">
+      <div className="row row-cols-1 row-cols-md-4 g-4 contenedor">
         <div className="col">
           <div className="card">
 
