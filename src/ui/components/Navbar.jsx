@@ -80,8 +80,8 @@ export const Navbar = () => {
                 <button type="button" class="btn btn-outline-primary">Buscar</button>
             </div>
 
-            <div className="navbar-collapse padre" >
-                <div className="navbar-nav menu" style={{ backgroundColor: '#50CAB3' }}>
+            <div className="navbar-collapse padre"  >
+                <div className="navbar-nav menu" style={{ backgroundColor: '#50CAB3'}}>
 
                     <NavLink
                         className="nav-item nav-link caja"
@@ -89,20 +89,20 @@ export const Navbar = () => {
                     >
                         Cursos
                     </NavLink>
-                    <li className="nav-item dropdown " >
+                    <li  className="nav-item dropdown " >
                         <NavLink
                             className="nav-link dropdown-toggle caja" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                             to="/tareas"
                         >
                             Tareas
                         </NavLink>
-                        <ul className="dropdown-menu caja" aria-labelledby="navbarDropdown" >
+                        <ul className="dropdown-menu caja" aria-labelledby="navbarDropdown"  >
                             <li >
 
-                                <a className='dropdown-item' href='/tareascompletadas' >
+                                <a className='dropdown-item' href='/tareascompletadas'  >
                                     Tareas Completadas
                                 </a>
-                                <a className='dropdown-item' href='/tareaspendientes' >
+                                <a className='dropdown-item' href='/tareaspendientes'  >
                                     Tareas Pendientes
                                 </a>
 
@@ -124,7 +124,7 @@ export const Navbar = () => {
 
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
-                    <span className='nav-item nav-link text-primary'>
+                    <span className='nav-item nav-link text-primary' >
                         Sofía
                     </span>
 
@@ -140,6 +140,5 @@ export const Navbar = () => {
         </Word.Provider>
     )
 }
-
 export { Word };
 // export const word = curso;
