@@ -1,7 +1,51 @@
-import './Navbar.css'
+import './Navbar.css';
+import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
+import { createSpeechlySpeechRecognition } from '@speechly/speech-recognition-polyfill';
+import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { createContext } from 'react';
+import { CursosList } from '../../cursos/Components/CursosList';
+
+const appId = process.env.REACT_APP_SPEECHLY_APP_ID;
+const SpeechlySpeechRecognition = createSpeechlySpeechRecognition(appId);
+SpeechRecognition.applyPolyfill(SpeechlySpeechRecognition);
+
+const Word = createContext();
+
 export const Navbar = () => {
     const navigate = useNavigate();
+
+    const numbers = {
+        one: '1',
+        two: '2',
+        three: '3',
+        four: '4',
+        five: '5',
+        six: '6',
+        seven: '7',
+        eight: '8',
+        nine: '9',
+        zero: '0',
+        o: '0',
+    };
+    const [curso, setCurso] = useState('');
+
+    const commands = [
+        {
+            command: '* IS THE COURSE',
+            callback: function (curso) {
+                setCurso(`${curso}`);
+            },
+            matchInterim: true,
+        },
+    ];
+
+    const {
+        transcript,
+        listening,
+        // browserSupportsSpeechRecognition
+    } = useSpeechRecognition({ commands });
+    const startListening = () => SpeechRecognition.startListening({ continuous: true });
 
     const onLogout = () => {
         navigate('/login', {
@@ -9,6 +53,7 @@ export const Navbar = () => {
         });
     }
     return (
+        <Word.Provider value={curso}>
         <nav className="navbar navbar-expand-sm navbar-light p-2" >
 
             <Link
@@ -18,7 +63,20 @@ export const Navbar = () => {
                 StudyHub
             </Link>
             <div class="input-group">
-                <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" />
+                <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" 
+                defaultValue={curso}
+                // onClick={setWord(transcript)}
+                />
+                <button type="button" class="btn" 
+                onTouchStart={startListening}
+                onMouseDown={startListening}
+                onTouchEnd={SpeechRecognition.stopListening}
+                onMouseUp={SpeechRecognition.stopListening}>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+                    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
+                    <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
+                    </svg>
+                </button>
                 <button type="button" class="btn btn-outline-primary">Buscar</button>
             </div>
 
@@ -79,5 +137,9 @@ export const Navbar = () => {
                 </ul>
             </div>
         </nav>
+        </Word.Provider>
     )
 }
+
+export { Word };
+// export const word = curso;
