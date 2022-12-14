@@ -3,21 +3,48 @@ import React, { useState } from 'react';
 import { Link, NavLink, useNavigate } from 'react-router-dom';
 import { createSpeechlySpeechRecognition } from '@speechly/speech-recognition-polyfill';
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
+import { createContext } from 'react';
+import { CursosList } from '../../cursos/Components/CursosList';
 
 const appId = process.env.REACT_APP_SPEECHLY_APP_ID;
 const SpeechlySpeechRecognition = createSpeechlySpeechRecognition(appId);
 SpeechRecognition.applyPolyfill(SpeechlySpeechRecognition);
 
+const Word = createContext();
+
 export const Navbar = () => {
     const navigate = useNavigate();
 
-    // const [word, setWord] = useState('');
+    const numbers = {
+        one: '1',
+        two: '2',
+        three: '3',
+        four: '4',
+        five: '5',
+        six: '6',
+        seven: '7',
+        eight: '8',
+        nine: '9',
+        zero: '0',
+        o: '0',
+    };
+    const [curso, setCurso] = useState('');
+
+    const commands = [
+        {
+            command: '* IS THE COURSE',
+            callback: function (curso) {
+                setCurso(`${curso}`);
+            },
+            matchInterim: true,
+        },
+    ];
 
     const {
         transcript,
-        // listening,
+        listening,
         // browserSupportsSpeechRecognition
-    } = useSpeechRecognition();
+    } = useSpeechRecognition({ commands });
     const startListening = () => SpeechRecognition.startListening({ continuous: true });
 
     const onLogout = () => {
@@ -26,6 +53,7 @@ export const Navbar = () => {
         });
     }
     return (
+        <Word.Provider value={curso}>
         <nav className="navbar navbar-expand-sm navbar-light p-2" >
 
             <Link
@@ -36,7 +64,7 @@ export const Navbar = () => {
             </Link>
             <div class="input-group">
                 <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" 
-                defaultValue={transcript}
+                defaultValue={curso}
                 // onClick={setWord(transcript)}
                 />
                 <button type="button" class="btn" 
@@ -109,7 +137,9 @@ export const Navbar = () => {
                 </ul>
             </div>
         </nav>
+        </Word.Provider>
     )
 }
 
-// export 
+export { Word };
+// export const word = curso;
