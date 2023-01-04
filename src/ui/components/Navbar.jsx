@@ -127,7 +127,7 @@ export const Navbar = () => {
                     </ul>
                 </div>
             </nav>
-        // {/* </Word.Provider> */}
+        // </Word.Provider>
     )
 }
 // export { Word };
