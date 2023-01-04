@@ -61,89 +61,72 @@ export const Navbar = () => {
 
     return (
         <Word.Provider value={curso}>
-        <nav className="navbar navbar-expand-sm navbar-light p-2" >
+            <nav className="navbar navbar-expand-sm navbar-light p-2" >
 
-            <Link
-                className="navbar-brand" style={{ color: '#FFE000' }}
-                to="/"
-            >
-                StudyHub
-            </Link>
-            <div class="input-group">
-                <input type="search" class="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon" 
-                defaultValue={curso}
-                // onClick={setWord(transcript)}
-                />
-                <button type="button" class="btn" 
-                onTouchStart={startListening}
-                onMouseDown={startListening}
-                onTouchEnd={SpeechRecognition.stopListening}
-                onMouseUp={SpeechRecognition.stopListening}>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
-                    <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z"/>
-                    <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z"/>
-                    </svg>
-                </button>
-                <button type="button" class="btn btn-outline-primary">Buscar</button>
-            </div>
+                <Link
+                    className="navbar-brand" style={{ color: '#FFE000' }}
+                    to="/"
+                >
+                    StudyHub
+                </Link>
+                <div class="input-group">
+                    <input type="search" className="form-control rounded" placeholder="Buscar" aria-label="Search" aria-describedby="search-addon"
+                        defaultValue={curso}
+                    // onClick={setWord(transcript)}
+                    />
+                    <button type="button" className="btn"
+                        onTouchStart={startListening}
+                        onMouseDown={startListening}
+                        onTouchEnd={SpeechRecognition.stopListening}
+                        onMouseUp={SpeechRecognition.stopListening}>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-mic" viewBox="0 0 16 16">
+                            <path d="M3.5 6.5A.5.5 0 0 1 4 7v1a4 4 0 0 0 8 0V7a.5.5 0 0 1 1 0v1a5 5 0 0 1-4.5 4.975V15h3a.5.5 0 0 1 0 1h-7a.5.5 0 0 1 0-1h3v-2.025A5 5 0 0 1 3 8V7a.5.5 0 0 1 .5-.5z" />
+                            <path d="M10 8a2 2 0 1 1-4 0V3a2 2 0 1 1 4 0v5zM8 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3z" />
+                        </svg>
+                    </button>
+                    <button type="button" className="btn btn-outline-primary">Buscar</button>
+                </div>
 
-            <div className="navbar-collapse padre"  >
-                <div className="navbar-nav menu" style={{ backgroundColor: '#50CAB3'}}>
+                <div className="navbar-collapse padre"  >
+                    <div className="navbar-nav menu" style={{ backgroundColor: '#50CAB3' }}>
 
-                    <NavLink
-                        className="nav-item nav-link caja"
-                        to="/cursos"
-                    >
-                        Cursos
-                    </NavLink>
-                    <li  className="nav-item dropdown " >
                         <NavLink
-                            className="nav-link dropdown-toggle caja" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
-                            to="/tareas"
+                            className="nav-item nav-link caja"
+                            to="/cursos"
+                        >
+                            Cursos
+                        </NavLink>
+
+                        <NavLink
+                            className="nav-item nav-link caja" to="/tareas"
                         >
                             Tareas
                         </NavLink>
-                        <ul className="dropdown-menu caja" aria-labelledby="navbarDropdown"  >
-                            <li >
 
-                                <a className='dropdown-item' href='/tareascompletadas'  >
-                                    Tareas Completadas
-                                </a>
-                                <a className='dropdown-item' href='/tareaspendientes'  >
-                                    Tareas Pendientes
-                                </a>
-
-                            </li>
-                        </ul>
-
-
-                    </li>
-
-
-                    <NavLink
-                        className="nav-item nav-link "
-                        to="/progreso"
-                    >
-                        Progreso
-                    </NavLink>
+                        <NavLink
+                            className="nav-item nav-link "
+                            to="/progreso"
+                        >
+                            Progreso
+                        </NavLink>
+                    </div>
                 </div>
-            </div>
 
-            <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
-                <ul className="navbar-nav ml-auto">
-                    <span className='nav-item nav-link text-primary' >
-                        {user.nombre}
-                    </span>
+                <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
+                    <ul className="navbar-nav ml-auto">
+                        <span className='nav-item nav-link text-success' >
+                            {user.nombre}
+                        </span>
 
-                    <button
-                        className='nav-item nav-link btn'
-                        onClick={onLogout}
-                    >
-                        Logout
-                    </button>
-                </ul>
-            </div>
-        </nav>
+                        <button
+                            className='nav-item nav-link btn btn-danger' style={{ color: 'white' }} type="button"
+                            onClick={onLogout}
+                        >
+                            Logout
+                        </button>
+                    </ul>
+                </div>
+            </nav>
         </Word.Provider>
     )
 }

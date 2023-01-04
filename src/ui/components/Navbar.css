@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@900&display=swap'); 
 .padre{
     display: block;
     position: absolute;
@@ -31,5 +32,9 @@
     margin-right: auto;
  
   
+}
+.navbar-brand{
+    font-family: 'M PLUS 1p', sans-serif;
+    font-size: 1.7rem;
 }
 

@@ -6,7 +6,7 @@
             "descripcion": "Juan Carlos Alvarado Chimoy",
             "semana1":
                {
-                   "nombre": "Semana 1",
+                   "nombre": "Semana 1 - CI",
                    "archivo": "",
                    "pregunta1": 
                         {
@@ -29,7 +29,7 @@
                 },
             "semana2":
                 {
-                    "nombre": "Semana 2",
+                    "nombre": "Semana 2 - CI",
                     "archivo": "",
                     "pregunta1":
                         {
@@ -52,7 +52,7 @@
                 },
             "semana3":
                 {
-                     "nombre": "Semana 3",
+                     "nombre": "Semana 3 - CI",
                      "archivo": "",
                      "pregunta1":
                          {
@@ -75,7 +75,7 @@
                 },
             "semana4":
                 {
-                     "nombre": "Semana 4",
+                     "nombre": "Semana 4 - CI",
                      "archivo": "",
                      "pregunta1":
                          {
@@ -98,7 +98,7 @@
                 },
             "semana5":
                 {
-                     "nombre": "Semana 5",
+                     "nombre": "Semana 5 - CI",
                      "archivo": "",
                      "pregunta1":
                          {
@@ -127,7 +127,7 @@
             "descripcion": "Pamela María Rojas Sandoval",
             "semana1":
                {
-                   "nombre": "Semana1",
+                   "nombre": "Semana1 - AL",
                    "archivo": "",
                    "pregunta1": 
                         {
@@ -150,7 +150,7 @@
                 },
             "semana2":
                 {
-                    "nombre": "Semana 2",
+                    "nombre": "Semana 2 - AL",
                     "archivo": "",
                     "pregunta1":
                         {
@@ -173,7 +173,7 @@
                 },
             "semana3":
                 {
-                     "nombre": "Semana 3",
+                     "nombre": "Semana 3 - AL",
                      "archivo": "",
                      "pregunta1":
                          {
@@ -196,7 +196,7 @@
                 },
             "semana4":
                 {
-                     "nombre": "Semana 4",
+                     "nombre": "Semana 4 - AL",
                      "archivo": "",
                      "pregunta1":
                          {
@@ -219,7 +219,7 @@
                 },
             "semana5":
                 {
-                     "nombre": "Semana 5",
+                     "nombre": "Semana 5 - AL",
                      "archivo": "",
                      "pregunta1":
                          {
@@ -248,7 +248,7 @@
             "descripcion": "Gabriela María Rosales Guerra",
             "semana1":
                {
-                   "nombre": "Semana 1",
+                   "nombre": "Semana 1 - Inglés",
                    "archivo": "",
                    "pregunta1": 
                         {
@@ -271,7 +271,7 @@
                 },
             "semana2":
                 {
-                    "nombre": "Semana 2",
+                    "nombre": "Semana 2 - Inglés",
                     "archivo": "",
                     "pregunta1":
                         {
@@ -294,7 +294,7 @@
                 },
             "semana3":
                 {
-                     "nombre": "Semana 3",
+                     "nombre": "Semana 3 - Inglés",
                      "archivo": "",
                      "pregunta1":
                          {
@@ -317,7 +317,7 @@
                 },
             "semana4":
                 {
-                     "nombre": "Semana 4",
+                     "nombre": "Semana 4 - Inglés",
                      "archivo": "",
                      "pregunta1":
                          {
@@ -340,7 +340,7 @@
                 },
             "semana5":
                 {
-                     "nombre": "Semana 5",
+                     "nombre": "Semana 5 - Inglés",
                      "archivo": "",
                      "pregunta1":
                          {

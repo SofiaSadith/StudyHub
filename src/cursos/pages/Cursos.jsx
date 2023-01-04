@@ -6,7 +6,6 @@ export const Cursos = () => {
     <>
     <div className="contenedor">
       <h1>Cursos</h1>
-      <hr/>
       
       <CursosList/>
       </div>

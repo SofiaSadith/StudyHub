@@ -1,5 +1,11 @@
+.text-muted{
+    color: white!important;
+
+}
 .contenedor{
     margin-top: 5rem;
+    margin-bottom: 3rem;
+    
 }
 .todo{
     display: flex;
@@ -10,6 +16,14 @@
 .estadistica{
     width: 20rem;
     margin-top: 2rem;
+}
+.card{
+    background: #00A49B;
+    color: white;
+    border-color: #C3D6D4;
+}
+.card .text-center{
+    border-color: transparent;
 }
 .notas{
     margin-top: 3rem;
@@ -50,4 +64,17 @@ thead{
 }
 tbody{
     background: #F2ECFF;
+}
+.osito{
+    margin-top: 4rem;
+    text-align: center;
+
+}
+
+.g-2, .gx-2 {
+    --bs-gutter-x: 0rem;
+}
+
+.contenedor2{
+    margin-top: 2rem;
 }

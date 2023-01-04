@@ -16,11 +16,9 @@ export const StudyRoutes = () => {
             <Route path='tareas' element={<Tareas/>}/>
             
             <Route path='progreso' element={<Progreso/>}/>
+
             
-            <Route path='tareascompletadas' element={<TareasCompletadas/>}/>
-            <Route path='tareaspendientes' element={<TareasPendientes/>}/>
-            
-            <Route path='/' element={<Navigate to ='/cursos'/>}/>
+            <Route path='/*' element={<Navigate to ='/cursos'/>}/>
             
             <Route path="curso/:id" element={<CursoPage/>}/>
             

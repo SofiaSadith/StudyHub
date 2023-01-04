@@ -2,14 +2,15 @@ import { Navigate, useParams } from 'react-router-dom'
 import { getCursoById } from '../helpers';
 import { Link } from 'react-router-dom';
 import './Pages.css';
-export const TareasPage = () => {
-  const { id } = useParams();
+
+export const TareasList = (props) => {
+  const id  = props.id;
   const curso = getCursoById(id);
 
 
-  if (!curso) {
-    return <Navigate to="/cursos" />
-  }
+  // if (!curso) {
+  //   return <Navigate to="/cursos" />
+  // }
   return (
     <>
       <div className="row row-cols-1 row-cols-md-4 g-4 contenedor">

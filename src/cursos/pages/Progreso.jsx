@@ -17,7 +17,7 @@ export const Progreso = () => {
       </div>
       <div className="todo">
         <div className="estadistica">
-          <Pie data={data} />
+          <Pie data={data} options={{animation:false}}/>
         </div>
 
         <div className="notas">
