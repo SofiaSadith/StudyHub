@@ -13,7 +13,7 @@ const appId = process.env.REACT_APP_SPEECHLY_APP_ID;
 const SpeechlySpeechRecognition = createSpeechlySpeechRecognition(appId);
 SpeechRecognition.applyPolyfill(SpeechlySpeechRecognition);
 
-const Word = createContext();
+// const Word = createContext();
 
 export const Navbar = () => {
 
@@ -60,7 +60,7 @@ export const Navbar = () => {
     //const [usuario, establecerUsuario] = useState(user.nombre);
 
     return (
-        <Word.Provider value={curso}>
+        // <Word.Provider value={curso}>
             <nav className="navbar navbar-expand-sm navbar-light p-2" >
 
                 <Link
@@ -127,8 +127,8 @@ export const Navbar = () => {
                     </ul>
                 </div>
             </nav>
-        </Word.Provider>
+        // </Word.Provider>
     )
 }
-export { Word };
+// export { Word };
 // export const word = curso;
