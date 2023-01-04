@@ -4,6 +4,7 @@ import { CursosCard } from './CursosCard';
 import {Word} from '../../ui/components/Navbar';
 // import { getCurso } from '../../store/slices/cursos';
 
+export const CursosList = (props) => {
   return (
     <div className="row rows-cols-1 row-cols-md-2 g-3">
         {courses.data
