@@ -24,7 +24,7 @@ export const Progreso = () => {
         
           
 			<div id="table">
-				<h1>NOTAS</h1>
+				<h1>Cálculo Integral - Notas</h1>
 				<div className="tabla tablaAlum">
 					<table class="table table-dar table-hover table-bordered">
 						<thead>
@@ -42,7 +42,6 @@ export const Progreso = () => {
 								<td>02/05/2022 - 8:00 pm</td>
                 <td>15/20</td>
 							
-
 							</tr>
 						</tbody>
 					</table>

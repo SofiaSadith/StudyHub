@@ -7,17 +7,18 @@ export const data = {
   labels: ['Tareas Realizadas', 'Tareas NO Realizadas'],
   datasets: [
     {
-      label: '# of Votes',
+      label: '#Tareas',
       data: [12, 3],
       backgroundColor: [
-        'rgba(255, 105, 105)',
-        'rgba(243, 238, 217)',
+        'rgba(16, 117, 133)',
+        'rgba(0, 164, 155)',
+        
         
       ],
       borderColor: [
-        'rgba(255, 105, 105)',
-        'rgba(243, 238, 217)',
-        
+        'rgba(255, 255, 255)',
+        'rgba(255, 255, 255)',
+ 
       ],
       borderWidth: 1,
     },

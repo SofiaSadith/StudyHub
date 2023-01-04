@@ -14,7 +14,7 @@
 .notas{
     margin-top: 3rem;
     width: 600px; 
-    height: 200px; 
+    height: 150px; 
     background: #FFFFFF;
     text-align: center;
   
@@ -38,4 +38,16 @@
     top: 40%;
     left: 45%;
     transform: translate(-50%, -50%);
+}
+#table{
+    background-color: #396A6D;
+    color: white;
+
+}
+thead{
+    background: #518071;
+    color: white;
+}
+tbody{
+    background: #F2ECFF;
 }
