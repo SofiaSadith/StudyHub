@@ -4,3 +4,8 @@ StudyHub propone un sistema de aprendizaje tal que los alumnos que accedan a est
 - Sofia Poma Altamirano
 - Gerald Villarroel Lajo
 - Sebastian Segundo Donayre
+## Pasos para la ejecución del proyecto:
+- git clone https://github.com/SofiaSadith/StudyHub.git
+- cd StudyHub
+- npm install
+- npm start
