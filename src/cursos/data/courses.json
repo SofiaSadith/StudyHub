@@ -252,14 +252,14 @@
                    "archivo": "",
                    "pregunta1": 
                         {
-                            "enunciado" : "Es aquella integral cuya función es evaluada sobre una curva:",
-                            "opciones" : ["Integral en recta", "Integral bajo la curva", "Integral de línea", "Integral doble"],
+                            "enunciado" : "She's _______ university teacher.",
+                            "opciones" : ["a", "an", "the", "one"],
                             "respuesta" : "Integral bajo la curva"
                         },
                     "pregunta2": 
                         {
-                            "enunciado" : "Según Riemann, ¿Cúando una función 'f' es integrable sobre un intervalo [a,b]?",
-                            "opciones" : ["Las integrales superior e inferior de 'f' son iguales.", "'f' es acotada sobre [a,b]", "'f' es acotada sobre [a,b] y las integrales superior e inferior son iguales."],
+                            "enunciado" : "I like _______ small animals.?",
+                            "opciones" : ["the", "every", "all"],
                             "respuesta" : "'f' es acotada sobre [a,b] y las integrales superior e inferior son iguales."
                         },
                     "pregunta3": 

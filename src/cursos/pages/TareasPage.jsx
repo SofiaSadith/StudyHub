@@ -28,7 +28,7 @@ export const TareasPage = () => {
               <div className="form-check">
                 <input className="form-check-input" type="radio" name="flexRadioDefault" />
                   <label className="form-check-label" >
-                  {curso.semana3.pregunta1.opciones[1]}
+                  {curso.semana1.pregunta1.opciones[1]}
                   </label>
               </div>
 
@@ -39,17 +39,17 @@ export const TareasPage = () => {
           <div className="card">
 
             <div className="card-body">
-              <h5 className="card-title">{curso.semana2.pregunta2.enunciado}</h5>
+              <h5 className="card-title">{curso.semana1.pregunta2.enunciado}</h5>
               <div className="form-check">
                 <input className="form-check-input" type="radio" name="flexRadioDefault2" />
                   <label className="form-check-label" >
-                  {curso.semana3.pregunta2.opciones[0]}
+                  {curso.semana1.pregunta2.opciones[0]}
                   </label>
               </div>
               <div className="form-check">
                 <input className="form-check-input" type="radio" name="flexRadioDefault2" />
                   <label className="form-check-label" >
-                  {curso.semana3.pregunta2.opciones[1]}
+                  {curso.semana1.pregunta2.opciones[1]}
                   </label>
               </div>
             </div>
