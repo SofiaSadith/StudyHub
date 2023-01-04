@@ -1,5 +1,4 @@
 import { Navigate, useParams } from 'react-router-dom'
-
 import { getCursoById } from '../helpers';
 import './Pages.css';
 export const TareasPage = () => {

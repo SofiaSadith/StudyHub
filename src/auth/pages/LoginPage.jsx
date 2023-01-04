@@ -1,11 +1,13 @@
 import { useNavigate } from "react-router-dom"
 import React from 'react'
+import Datos from "./Datos";
 
 export const LoginPage = () => {
 
     const navigate = useNavigate();
 
-    function onLogin(){
+    function onLogin(nombre){
+        Datos.nombre = nombre;
         navigate('/', {
             replace: true
         })
@@ -24,7 +26,7 @@ export const LoginPage = () => {
             .then(data => {
                 console.log("inin");
                 if (data.status === "SUCCESS") {
-                    onLogin();
+                    onLogin(data.nombre);
                 }
                 else {
                     alert(data.message);
