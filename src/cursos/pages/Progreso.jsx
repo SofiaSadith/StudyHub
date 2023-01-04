@@ -39,7 +39,25 @@ export const Progreso = () => {
 							<tr>
 								<td>Semana 1</td>
 								
-								<td>02/05/2022 - 8:00 pm</td>
+								<td>02/01/2023 - 8:00 pm</td>
+                <td>15/20</td>
+							
+							</tr>
+						</tbody>
+            <tbody>
+							<tr>
+								<td>Semana 2</td>
+								
+								<td>03/01/2023 - 9:00 pm</td>
+                <td>15/20</td>
+							
+							</tr>
+						</tbody>
+            <tbody>
+							<tr>
+								<td>Semana 3</td>
+								
+								<td>04/01/2023 - 7:00 am</td>
                 <td>15/20</td>
 							
 							</tr>

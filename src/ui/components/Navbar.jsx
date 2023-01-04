@@ -6,7 +6,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import { createContext } from 'react';
 import { CursosList } from '../../cursos/Components/CursosList';
 import Datos from '../../auth/pages/Datos';
-
+import Speech from 'react-speech';
 
 const user = Datos;
 const appId = process.env.REACT_APP_SPEECHLY_APP_ID;
@@ -36,7 +36,7 @@ export const Navbar = () => {
 
     const commands = [
         {
-            command: '* IS THE COURSE',
+            command: 'SHOW ME *',
             callback: function (curso) {
                 setCurso(`${curso}`);
             },
@@ -57,9 +57,53 @@ export const Navbar = () => {
         });
     }
 
+    const style = {
+        container: { },
+        text: { },
+        buttons: { },
+        play: {
+          hover: {
+            backgroundColor: 'GhostWhite'
+          },
+          button: {
+            cursor: 'pointer',
+            pointerEvents: 'none',
+            outline: 'none',
+            backgroundColor: 'Gainsboro',
+            border: 'solid 1px rgba(255,255,255,1)',
+            borderRadius: 6
+          }
+        },
+        pause: {
+          play: { },
+          hover: { }
+        },
+        stop: {
+          play: {
+          hover: { },
+          button: { }
+        },
+        resume: {
+          play: {
+          hover: { },
+          button: { }
+        }
+      }}};
     //const [usuario, establecerUsuario] = useState(user.nombre);
 
     return (
+        <>
+      
+        <Speech style={{
+            cursor: 'pointer',
+            pointerEvents: 'none',
+            outline: 'none',
+            backgroundColor: 'Gainsboro',
+            color: "#000000",
+            border: 'solid 1px rgba(255,255,255,1)',
+            borderRadius: 6
+          }} text={`Welcome ${user.nombre}`}/>
+        
         <Word.Provider value={curso}>
             <nav className="navbar navbar-expand-sm navbar-light p-2" >
 
@@ -128,6 +172,7 @@ export const Navbar = () => {
                 </div>
             </nav>
         </Word.Provider>
+        </>
     )
 }
 export { Word };
