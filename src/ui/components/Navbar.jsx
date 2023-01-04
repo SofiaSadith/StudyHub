@@ -5,7 +5,10 @@ import { createSpeechlySpeechRecognition } from '@speechly/speech-recognition-po
 import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognition';
 import { createContext } from 'react';
 import { CursosList } from '../../cursos/Components/CursosList';
+import Datos from '../../auth/pages/Datos';
 
+
+const user = Datos;
 const appId = process.env.REACT_APP_SPEECHLY_APP_ID;
 const SpeechlySpeechRecognition = createSpeechlySpeechRecognition(appId);
 SpeechRecognition.applyPolyfill(SpeechlySpeechRecognition);
@@ -13,6 +16,7 @@ SpeechRecognition.applyPolyfill(SpeechlySpeechRecognition);
 const Word = createContext();
 
 export const Navbar = () => {
+
     const navigate = useNavigate();
 
     const numbers = {
@@ -52,6 +56,9 @@ export const Navbar = () => {
             replace: true
         });
     }
+
+    //const [usuario, establecerUsuario] = useState(user.nombre);
+
     return (
         <Word.Provider value={curso}>
         <nav className="navbar navbar-expand-sm navbar-light p-2" >
@@ -125,7 +132,7 @@ export const Navbar = () => {
             <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
                 <ul className="navbar-nav ml-auto">
                     <span className='nav-item nav-link text-primary' >
-                        Sofía
+                        {user.nombre}
                     </span>
 
                     <button
