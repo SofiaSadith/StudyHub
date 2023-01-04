@@ -6,7 +6,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import { createContext } from 'react';
 import { CursosList } from '../../cursos/Components/CursosList';
 import Datos from '../../auth/pages/Datos';
-import { setCurso } from '../../store/slices/cursos';
+
 
 const user = Datos;
 const appId = process.env.REACT_APP_SPEECHLY_APP_ID;
