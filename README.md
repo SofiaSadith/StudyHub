@@ -4,6 +4,8 @@ StudyHub propone un sistema de aprendizaje tal que los alumnos que accedan a est
 - Sofia Poma Altamirano
 - Gerald Villarroel Lajo
 - Sebastian Segundo Donayre
+## Link de los Entregables:
+https://drive.google.com/drive/folders/1MBeh5wVPX__bLwdJ50bkrV6H10Duooo0?usp=share_link
 ## Pasos para la ejecución del proyecto:
 - git clone https://github.com/SofiaSadith/StudyHub.git
 - cd StudyHub
